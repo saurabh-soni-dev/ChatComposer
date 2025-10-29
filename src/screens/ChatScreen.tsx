@@ -10,6 +10,7 @@ import {
 import { useChat } from '../hooks/useChat';
 import { useKeyboard } from '../hooks/useKeyboard';
 import { ChatComposer, JumpToLatest, MessageList } from '../components';
+import colors from '../theme/colors';
 
 export const ChatScreen: FC = () => {
   const { messages, sendMessage, isTyping } = useChat();
@@ -29,7 +30,13 @@ export const ChatScreen: FC = () => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
       <View style={styles.toggles}>
-        <Text>Slow Mode: </Text>
+        <Text
+          style={styles.textStyle}
+          allowFontScaling={false}
+          numberOfLines={1}
+        >
+          Slow Mode:{' '}
+        </Text>
         <Switch value={slowMode} onValueChange={setSlowMode} />
         {/* Add more toggles for ads, etc., as needed */}
       </View>
@@ -67,6 +74,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'red',
+  },
+  textStyle: {
+    fontSize: 14,
+    color: colors.black,
   },
 });

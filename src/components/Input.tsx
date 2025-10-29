@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { TextInput, StyleSheet } from 'react-native';
+import colors from '../theme/colors';
 
 interface InputProps {
   value: string;
@@ -19,7 +20,7 @@ export const Input: FC<InputProps> = ({
     value={value}
     onChangeText={onChangeText}
     placeholder={placeholder ?? 'Typing...'}
-    placeholderTextColor={'black'}
+    placeholderTextColor={colors.black}
     multiline={multiline}
     autoCorrect={false}
     keyboardType={'default'}
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     fontSize: 14,
-    color: 'black',
+    color: colors.black,
   },
   multiline: {
     maxHeight: 120,

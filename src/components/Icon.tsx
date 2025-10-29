@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
+import colors from '../theme/colors';
 
 interface IconProps {
   onPress: () => void;
@@ -24,6 +25,6 @@ const styles = StyleSheet.create({
   icon: {
     height: 22,
     width: 22,
-    tintColor: 'black',
+    tintColor: colors.black,
   },
 });

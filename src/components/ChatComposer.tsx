@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { IconButton, Input, Button } from '../components';
+import colors from '../theme/colors';
 
 interface ChatComposerProps {
   onSend: (text: string) => void;
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     padding: 20,
-    backgroundColor: '#F0F0F0',
+    backgroundColor: colors.bgColor,
   },
   inputView: {
     flex: 1,

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import colors from '../theme/colors';
 
 interface ButtonProps {
   title: string;
@@ -22,7 +23,7 @@ export const Button: FC<ButtonProps> = ({ title, onPress, disabled }) => (
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: colors.blue,
     height: 40,
     paddingHorizontal: 12,
     borderRadius: 5,
@@ -34,6 +35,6 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 14,
-    color: 'black',
+    color: colors.black,
   },
 });
