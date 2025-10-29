@@ -1,7 +1,6 @@
 import React, { FC, useRef, useState } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
-import { MessageBubble } from '../molecules/MessageBubble';
-import { TypingIndicator } from '../molecules/TypingIndicator';
+import { MessageBubble, TypingIndicator } from '../components';
 
 interface MessageListProps {
   messages: any[];

@@ -7,7 +7,7 @@ interface IconProps {
 
 export const IconButton: FC<IconProps> = ({ onPress }) => (
   <TouchableOpacity onPress={onPress} style={styles.card} activeOpacity={0.5}>
-    <Image source={require('../../assets/icons/mic.png')} style={styles.icon} />
+    <Image source={require('../assets/icons/mic.png')} style={styles.icon} />
   </TouchableOpacity>
 );
 

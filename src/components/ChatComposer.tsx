@@ -1,8 +1,6 @@
 import React, { FC, useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Input } from '../atoms/Input';
-import { Button } from '../atoms/Button';
-import { IconButton } from '../atoms/Icon';
+import { IconButton, Input, Button } from '../components';
 
 interface ChatComposerProps {
   onSend: (text: string) => void;

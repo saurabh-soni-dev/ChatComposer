@@ -7,11 +7,9 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import { MessageList } from '../components/organisms/MessageList';
-import { ChatComposer } from '../components/organisms/ChatComposer';
-import { JumpToLatest } from '../components/organisms/JumpToLatest';
 import { useChat } from '../hooks/useChat';
 import { useKeyboard } from '../hooks/useKeyboard';
+import { ChatComposer, JumpToLatest, MessageList } from '../components';
 
 export const ChatScreen: FC = () => {
   const { messages, sendMessage, isTyping } = useChat();
