@@ -30,15 +30,14 @@ export const ChatScreen: FC = () => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
       <View style={styles.toggles}>
-        <Text
+        {/* <Text
           style={styles.textStyle}
           allowFontScaling={false}
           numberOfLines={1}
         >
           Slow Mode:{' '}
         </Text>
-        <Switch value={slowMode} onValueChange={setSlowMode} />
-        {/* Add more toggles for ads, etc., as needed */}
+        <Switch value={slowMode} onValueChange={setSlowMode} /> */}
       </View>
       <MessageList
         messages={messages}
@@ -68,6 +67,7 @@ const styles = StyleSheet.create({
   toggles: {
     flexDirection: 'row',
     padding: 10,
+    marginTop: 50,
   },
   composer: {
     position: 'absolute',

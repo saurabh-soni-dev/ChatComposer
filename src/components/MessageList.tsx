@@ -1,4 +1,4 @@
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { MessageBubble, TypingIndicator } from '../components';
 
@@ -24,7 +24,7 @@ export const MessageList: FC<MessageListProps> = ({
     onScroll(atBottom);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isAtBottom) flatListRef.current?.scrollToEnd();
   }, [messages, isAtBottom]);
 
@@ -34,7 +34,7 @@ export const MessageList: FC<MessageListProps> = ({
       data={messages}
       keyExtractor={item => item.id}
       renderItem={({ item }) => <MessageBubble message={item} />}
-      inverted
+      showsVerticalScrollIndicator={false}
       onScroll={handleScroll}
       ListFooterComponent={isTyping ? <TypingIndicator /> : null}
       style={styles.list}

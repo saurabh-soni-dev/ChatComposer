@@ -19,7 +19,7 @@ export const useChat = () => {
     setTimeout(() => {
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: 'Simulated response.',
+        text: 'Chatbot response.',
         sender: 'assistant',
         timestamp: new Date(),
         isStreaming: true,
