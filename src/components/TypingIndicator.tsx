@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import colors from '../theme/colors';
 
 export const TypingIndicator: FC = () => (
-  <View style={styles.container}>
+  <View style={styles.container} testID="typing-indicator">
     <Text allowFontScaling={false} numberOfLines={1} style={styles.textStyle}>
       Typing...
     </Text>

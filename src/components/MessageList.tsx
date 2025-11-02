@@ -32,6 +32,7 @@ export const MessageList: FC<MessageListProps> = ({
   return (
     <FlatList
       ref={flatListRef}
+      testID="message-list"
       data={messages}
       keyExtractor={item => item.id}
       renderItem={({ item }) => <MessageBubble message={item} />}
