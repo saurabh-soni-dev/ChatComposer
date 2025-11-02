@@ -33,7 +33,7 @@ export const Input: FC<InputProps> = ({
 
 const styles = StyleSheet.create({
   input: {
-    borderWidth: 1,
+    borderWidth: 0.2,
     borderRadius: 5,
     padding: 10,
     fontSize: 14,
