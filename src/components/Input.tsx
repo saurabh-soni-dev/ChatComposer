@@ -19,7 +19,7 @@ export const Input: FC<InputProps> = ({
     style={[styles.input, multiline && styles.multiline]}
     value={value}
     onChangeText={onChangeText}
-    placeholder={placeholder ?? 'Typing...'}
+    placeholder={placeholder}
     placeholderTextColor={colors.black}
     multiline={multiline}
     autoCorrect={false}
@@ -41,5 +41,5 @@ const styles = StyleSheet.create({
   },
   multiline: {
     maxHeight: 120,
-  }, // For 6 lines
+  },
 });

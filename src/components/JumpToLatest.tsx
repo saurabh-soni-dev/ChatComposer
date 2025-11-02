@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 import colors from '../theme/colors';
 
-export const JumpToLatest: React.FC<{ count: number; onPress: () => void }> = ({
+export const JumpToLatest: FC<{ count: number; onPress: () => void }> = ({
   count,
   onPress,
 }) => (

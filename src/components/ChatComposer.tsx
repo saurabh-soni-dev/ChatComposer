@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Alert } from 'react-native';
 import { IconButton, Input, Button } from '../components';
 import colors from '../theme/colors';
 
@@ -18,18 +18,22 @@ export const ChatComposer: FC<ChatComposerProps> = ({ onSend, disabled }) => {
     }
   };
 
+  const handleRecording = () => {
+    Alert.alert('Recording feature is not implemented yet.');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.inputView}>
         <Input
           value={text}
           onChangeText={setText}
-          placeholder="Type..."
+          placeholder="Type a message..."
           multiline
         />
       </View>
       <View style={styles.actions}>
-        <IconButton onPress={() => {}} />
+        <IconButton onPress={handleRecording} />
         <Button
           title="Send"
           onPress={handleSend}
@@ -43,7 +47,7 @@ export const ChatComposer: FC<ChatComposerProps> = ({ onSend, disabled }) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    padding: 20,
+    padding: 25,
     backgroundColor: colors.bgColor,
   },
   inputView: {

@@ -16,6 +16,7 @@ export const useChat = () => {
     setMessages(prev => [...prev, newMessage]);
 
     setIsTyping(true);
+
     setTimeout(() => {
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -24,7 +25,9 @@ export const useChat = () => {
         timestamp: new Date(),
         isStreaming: true,
       };
+
       setMessages(prev => [...prev, assistantMessage]);
+
       simulateStreaming(
         assistantMessage,
         updated => {

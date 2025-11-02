@@ -1,15 +1,8 @@
 import React, { FC, useState } from 'react';
-import {
-  View,
-  StyleSheet,
-  Switch,
-  Text,
-  KeyboardAvoidingView,
-  Platform,
-} from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet, View } from 'react-native';
+import { ChatComposer, JumpToLatest, MessageList } from '../components';
 import { useChat } from '../hooks/useChat';
 import { useKeyboard } from '../hooks/useKeyboard';
-import { ChatComposer, JumpToLatest, MessageList } from '../components';
 import colors from '../theme/colors';
 
 export const ChatScreen: FC = () => {
@@ -17,7 +10,6 @@ export const ChatScreen: FC = () => {
   const { keyboardHeight } = useKeyboard();
   const [showJump, setShowJump] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
-  const [slowMode, setSlowMode] = useState(false);
 
   const handleSend = (text: string) => {
     sendMessage(text);
@@ -29,16 +21,7 @@ export const ChatScreen: FC = () => {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <View style={styles.toggles}>
-        {/* <Text
-          style={styles.textStyle}
-          allowFontScaling={false}
-          numberOfLines={1}
-        >
-          Slow Mode:{' '}
-        </Text>
-        <Switch value={slowMode} onValueChange={setSlowMode} /> */}
-      </View>
+      <View style={styles.toggles} />
       <MessageList
         messages={messages}
         isTyping={isTyping}

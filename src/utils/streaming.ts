@@ -16,5 +16,5 @@ export const simulateStreaming = (
       clearInterval(interval);
       onComplete();
     }
-  }, 45); // 30-60ms/token
+  }, 45);
 };

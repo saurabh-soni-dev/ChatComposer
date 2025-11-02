@@ -1,9 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { MessageBubble, TypingIndicator } from '../components';
+import { Message } from '../types/chat';
 
 interface MessageListProps {
-  messages: any[];
+  messages: Message[];
   isTyping: boolean;
   onScroll: (isAtBottom: boolean) => void;
 }
